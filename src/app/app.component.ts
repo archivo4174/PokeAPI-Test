@@ -43,9 +43,7 @@ export class AppComponent implements OnInit {
       const serviceMap = resp.results.map(result => this.detailsPokemon.getPokemonDetail(result.url));
       forkJoin(serviceMap).subscribe(pokemons => {
         this.pokemons = pokemons;
-        
-
-        
+        debugger
       });
     });
   }
