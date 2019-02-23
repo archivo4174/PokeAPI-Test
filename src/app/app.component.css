@@ -35,3 +35,8 @@ margin:auto;
   -moz-border-radius: 45px;
   border-radius: 45px;
 }
+
+.cards{
+    position: absolute;
+    top: 100px;
+}

@@ -55,23 +55,11 @@
 
          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="card" style="width: 18rem;">
-              <img src="/assets/img/poke.jpeg" class="card-img-top">
-              <div class="card-body">
-                <h5 class="card-title">Nombre: {{datopoke.name}}</h5>
-                <img (click)="pokemon()" type="button" class="pokeimg" data-toggle="modal" data-target="#exampleModalCenter" src="{{datopoke['sprites'].front_default}}">
-                <p class="card-text"></p>
-                
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Habilidades: {{datopoke.abilities['0'].ability.name}} </li>
-                <li class="list-group-item">Tipo: {{datopoke.types['0'].type.name}}</li>
-                <li class="list-group-item"></li>
-              </ul>
-              <button (click)="favoritos()" type="button" class="btn btn-success"></button>
-              <img src="/assets/img/dex.jpeg" class="card-img-top">
-            </div>
+            <img src="/assets/img/pokedex.png" >
+            <img class="cards" src="{{datopoke['sprites'].front_default}}" >
+            
           </div>
+
         </div>
 
 
