@@ -3,8 +3,10 @@ import { InfoPokemonService } from './services/info-pokemon.service';
 import { OnInit } from '@angular/core';
 import { PokeApiResponse } from './models/poke-api.response';
 import { DetailsPokemon } from './services/details-pokemon.service';
+import { PokemonDetail } from './models/pokemon-detail';
 import { Observable } from 'rxjs';
 import { forkJoin, of } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -14,23 +16,26 @@ import { forkJoin, of } from 'rxjs';
 export class AppComponent implements OnInit {
   title = 'pokemon';
   pokemons = [];
-  
+  datospoke = {};
 
   favoritos(){
     let audio = new Audio();
     audio.src = "/assets/audio/agregado.mp3";
     audio.load();
     audio.play();
-    
   }
 
-  pokemon(){
+  pokemon(pokemon){
+    
     let audio = new Audio();
     audio.src = "/assets/audio/pokemon.mp3";
     audio.load();
     audio.play();
-    
+    this.datospoke = pokemon;
+    debugger
   }
+
+
   
 
   constructor(
@@ -44,6 +49,7 @@ export class AppComponent implements OnInit {
       forkJoin(serviceMap).subscribe(pokemons => {
         this.pokemons = pokemons;
         debugger
+        
       });
     });
   }

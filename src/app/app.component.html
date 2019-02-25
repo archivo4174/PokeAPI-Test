@@ -3,7 +3,7 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+  
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -14,7 +14,7 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-        <img class="ball" src="/assets/img/ball.png" width="40" height="40">
+      <img class="ball" src="/assets/img/ball.png" width="40" height="40">
       <input class="form-control mr-sm-2" type="search" placeholder="Busca tu Pokemon" aria-label="Search">
       <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Buscar</button>
     </form>
@@ -28,39 +28,33 @@
 
 
 
-   <div class="container animated bounceInUp"  >
-      <div  *ngFor="let datopoke of pokemons; index as i;" class="tar1 mt-4 col-lg-4 col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img src="/assets/img/poke.jpeg" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">Nombre: {{datopoke.name}}</h5>
-          <img (click)="pokemon()" type="button" class="pokeimg" data-toggle="modal" data-target="#exampleModalCenter" src="{{datopoke['sprites'].front_default}}">
-          <p class="card-text"></p>
-          
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Habilidades: {{datopoke.abilities['0'].ability.name}} </li>
-          <li class="list-group-item">Tipo: {{datopoke.types['0'].type.name}}</li>
-          <li class="list-group-item"></li>
-        </ul>
-        <button (click)="favoritos()" type="button" class="btn btn-success"></button>
-        <img src="/assets/img/dex.jpeg" class="card-img-top">
+<div class="container animated bounceInUp" >
+  <div  *ngFor="let datopoke of pokemons; index as i;" class="tar1 mt-4 col-lg-4 col-md-4">
+    <div class="card" style="width: 18rem;">
+      <img src="/assets/img/poke.jpeg" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Nombre: {{datopoke.name}}</h5>
+        <img (click)="pokemon(datopoke)" type="button" class="pokeimg" data-toggle="modal" data-target="#exampleModalCenter" src="{{datopoke['sprites'].front_default}}">
+        <p class="card-text"></p>
+        
       </div>
-      </div>
-         </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Habilidades: {{datopoke.abilities['0'].ability.name}} </li>
+        <li class="list-group-item">Tipo: {{datopoke.types['0'].type.name}}</li>
+        <li class="list-group-item"></li>
+      </ul>
+      <button (click)="favoritos()" type="button" class="btn"></button>
+      <img src="/assets/img/dex.jpeg" class="card-img-top">
+    </div>
+  </div>
+</div>
 
 
+<app-modalpoke class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+  [pokemon]="datospoke">
+</app-modalpoke>
 
 
-
-         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <img src="/assets/img/pokedex.png" >
-            <img class="cards" src="{{datopoke['sprites'].front_default}}" >
-            
-          </div>
-
-        </div>
 
 
 

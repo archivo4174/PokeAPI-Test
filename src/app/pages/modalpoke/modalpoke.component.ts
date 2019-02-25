@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { PokemonDetail } from 'src/app/models/pokemon-detail';
 
 @Component({
   selector: 'app-modalpoke',
@@ -7,9 +8,52 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalpokeComponent implements OnInit {
 
+    /*@Input('nombre') nombre_poke: string;
+    @Input('foto') img: [any];
+    @Input('habilidad') habilidades: string = '';
+    @Input('tipopoke') tipo: string;
+    @Input('expBase') base: number;
+    @Input('peso') p: number;
+    @Input('altura') a: number;*/
+
+    @Input()
+    pokemon: PokemonDetail
+
   constructor() { }
 
+  getStats() {
+    return this.pokemon.stats.map(stat => stat.stat.name);;
+  }
+
+  getHabilidades(){
+    return this.pokemon.abilities.map(ab => ab.ability.name);
+    
+  }
+
+  getPeso(){
+    return this.pokemon.weight ? this.pokemon.weight : ''
+  }
+  getAltura(){
+    return this.pokemon.height ? this.pokemon.height : ''
+  }
+
+
+    getName(){
+      return this.pokemon.name ? this.pokemon.name : ''
+    }
+  getImage() {
+    return this.pokemon.sprites ? this.pokemon.sprites['front_default'] : ''
+  }
+
+  getBase(){
+    return this.pokemon.base_experience? this.pokemon.base_experience : ''
+  }
+  getType(){
+    return this.pokemon.types.map(types => types.type.name);
+  }
+
   ngOnInit() {
+
   }
 
 }
