@@ -1,34 +1,32 @@
 <!-- Modal -->
 <div   aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-      <img class="pokedexx" src="/assets/img/pokedex.png" >
+     <div class="divimg"> <img class="pokedexx" src="/assets/img/pokedex.png" > </div>
+     <div class="estadisticas">
+        <ul>
+          <li>Habilidades:</li>
+          <p> {{getHabilidades()}}</p>
+          <li >Estadísticas:</li>
+          <p> {{getStats()}}</p>
+          <li >Peso:</li>
+          <P> {{getPeso( )}}</P>
+          <li >Altura:</li>
+          <P> {{getAltura()}}</P>
+          <li>Tipo de pokemon:</li>
+          <p> {{getType()}}</p>
+          <li>Experiencia Base:</li>
+          <p> {{getBase()}}</p>
       
-      <div class=" carta" style="width: 18rem;">
-        <div></div>
-        <img src="{{getImage()}}" class="imgPoke" >
-        <div class="card-body">
-          <p > {{getName()}}</p>
-        </div>
+        </ul>
       </div>
+      <div class=" carta" >
+        <div class="divpokemon"> <img src="{{getImage()}}" class="imgPoke" > </div>
+      </div>
+      <div class="pokename"> <p > {{getName()}}</p> </div>
+      
+     
     </div>
-  </div>
+</div>
 
-  <div class="listadatos" >
-    <ul >
-      <li>Habilidades:</li>
-      <p> {{getHabilidades()}}</p>
-      <li >Estadísticas:</li>
-      <p> {{getStats()}}</p>
-      <li >Peso:</li>
-      <P> {{getPeso( )}}</P>
-      <li >Altura:</li>
-      <P> {{getAltura()}}</P>
-      <li>Tipo de pokemon:</li>
-      <p> {{getType()}}</p>
-      <li>Experiencia Base:</li>
-      <p> {{getBase()}}</p>
-
-    </ul>
-  </div>
 
 

@@ -22,7 +22,7 @@ export class ModalpokeComponent implements OnInit {
   constructor() { }
 
   getStats() {
-    debugger
+    
     if (this.pokemon.stats) {
       return this.pokemon.stats.map(stat => stat.stat.name);
     } else {

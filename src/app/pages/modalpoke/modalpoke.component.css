@@ -1,5 +1,7 @@
 .pokedexx{
     z-index: -4;
+     
+    height: auto;
 }
 .carta{
     position: absolute;
@@ -7,19 +9,92 @@
     left: 135px;
     z-index: -3;
 }
-
-.listadatos{
-    position: absolute;
-    left: 870px;
-
-    bottom: 55px;
-    font-size: 15px;
-
-}
-.imgPoke{
+.estadisticas{
     position: relative;
+    top: 50px;
+    right: 10px;
+    z-index: -2;
+    font-size: 14px;
+}
+.pokename{
+    position: relative;
+   right: 535px;
+    top: 170px;
+    
+    z-index: -2;
+}
+
+.imgPoke{
+    position: absolute;
     top: 50px;
     width: 300px;
     right: 100px;
     z-index: -1;
 }
+
+.container{
+    width: 100%;
+}
+.modal-dialog{
+    position: relative;
+    right: 10%;
+}
+.divimg{
+    position: relative;
+    width: 100%;
+    z-index: -4;
+}
+@media screen and (max-width: 500px){
+    .divimg{
+        position: relative;
+        
+        width: 80%;
+        
+
+
+    }
+}
+
+.divpokemon{
+    position: absolute;
+    top: 50px;
+    width: 300px;
+    left: 10%;
+    z-index: -1;
+}
+
+
+@media screen and (max-width: 900px){
+    .pokedexx{
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 350px;
+       left: 30px;
+       height: 350px;
+    }
+    .imgPoke{
+        position: absolute;
+        top: 80px;
+        width: 125px;
+        right: 250px;
+        z-index: -1;
+    }
+    .estadisticas{
+        position: relative;
+        top: 35px;
+        right: 50px;
+        z-index: -2;
+        font-size: 7px;
+       
+    }
+    .pokename{
+        position: relative;
+       right: 310px;
+        top: 105px;
+        
+        z-index: -2;
+    }
+
+}
+
