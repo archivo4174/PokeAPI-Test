@@ -3,15 +3,18 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InicioComponent } from './pages/inicio/inicio.component';
+
 import { DetailsPokemon } from './services/details-pokemon.service';
 import { ModalpokeComponent } from './pages/modalpoke/modalpoke.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { FavoritosComponent } from './pages/favoritos/favoritos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
-    ModalpokeComponent
+    ModalpokeComponent,
+    FavoritosComponent
   ],
   imports: [
     BrowserModule,

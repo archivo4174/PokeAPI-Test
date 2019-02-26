@@ -22,11 +22,20 @@ export class ModalpokeComponent implements OnInit {
   constructor() { }
 
   getStats() {
-    return this.pokemon.stats.map(stat => stat.stat.name);;
+    debugger
+    if (this.pokemon.stats) {
+      return this.pokemon.stats.map(stat => stat.stat.name);
+    } else {
+      return '';
+    }
   }
 
   getHabilidades(){
-    return this.pokemon.abilities.map(ab => ab.ability.name);
+    if (this.pokemon.abilities) {
+      return this.pokemon.abilities.map(ab => ab.ability.name);
+    } else {
+      return '';
+    }
     
   }
 
@@ -37,10 +46,10 @@ export class ModalpokeComponent implements OnInit {
     return this.pokemon.height ? this.pokemon.height : ''
   }
 
+  getName(){
+    return this.pokemon.name ? this.pokemon.name : ''
+  }
 
-    getName(){
-      return this.pokemon.name ? this.pokemon.name : ''
-    }
   getImage() {
     return this.pokemon.sprites ? this.pokemon.sprites['front_default'] : ''
   }
@@ -48,8 +57,13 @@ export class ModalpokeComponent implements OnInit {
   getBase(){
     return this.pokemon.base_experience? this.pokemon.base_experience : ''
   }
+
   getType(){
-    return this.pokemon.types.map(types => types.type.name);
+    if (this.pokemon.types) {
+      return this.pokemon.types.map(types => types.type.name);
+    } else {
+      return '';
+    }
   }
 
   ngOnInit() {
