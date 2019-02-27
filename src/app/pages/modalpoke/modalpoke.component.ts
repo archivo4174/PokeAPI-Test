@@ -8,13 +8,7 @@ import { PokemonDetail } from 'src/app/models/pokemon-detail';
 })
 export class ModalpokeComponent implements OnInit {
 
-    /*@Input('nombre') nombre_poke: string;
-    @Input('foto') img: [any];
-    @Input('habilidad') habilidades: string = '';
-    @Input('tipopoke') tipo: string;
-    @Input('expBase') base: number;
-    @Input('peso') p: number;
-    @Input('altura') a: number;*/
+    
 
     @Input()
     pokemon: PokemonDetail

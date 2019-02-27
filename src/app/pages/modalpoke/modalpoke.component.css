@@ -11,7 +11,7 @@
 }
 .estadisticas{
     position: relative;
-    top: 50px;
+    top: 40px;
     right: 10px;
     z-index: -2;
     font-size: 14px;
@@ -25,11 +25,9 @@
 }
 
 .imgPoke{
-    position: absolute;
-    top: 50px;
+    
     width: 300px;
-    right: 100px;
-    z-index: -1;
+    
 }
 
 .container{
@@ -38,6 +36,7 @@
 .modal-dialog{
     position: relative;
     right: 10%;
+   
 }
 .divimg{
     position: relative;
@@ -57,41 +56,63 @@
 
 .divpokemon{
     position: absolute;
-    top: 50px;
+    top: 160px;
     width: 300px;
     left: 10%;
-    z-index: -1;
+    z-index: 0;
 }
 
 
 @media screen and (max-width: 900px){
     .pokedexx{
-        position: relative;
+        position: absolute;
         margin-left: auto;
         margin-right: auto;
         width: 350px;
        left: 30px;
-       height: 350px;
+       top: -250px;
+       height:500px;
+       content:url("/assets/img/imgphone.jpeg");
+       
+        
     }
-    .imgPoke{
+
+    .modal-dialog{
+        position: relative;
+        right: 10%;
+        max-width:390px;
+    }
+    .pokedexx2{
         position: absolute;
-        top: 80px;
-        width: 125px;
-        right: 250px;
-        z-index: -1;
+        margin-left: auto;
+        margin-right: auto;
+        width: 350px;
+       left: 30px;
+       top: 245px;
+       height:500px;
+       content:url("/assets/img/imgphone_2.png");
+        
     }
+    .divpokemon{
+        position: absolute;
+        top: -140px;
+        width: 300px;
+        left: 30%;
+        z-index: 0;
+    }
+   
     .estadisticas{
         position: relative;
-        top: 35px;
-        right: 50px;
+        top: 535px;
+        right: 10px;
         z-index: -2;
-        font-size: 7px;
+        font-size: 12px;
        
     }
     .pokename{
         position: relative;
-       right: 310px;
-        top: 105px;
+       right: 160px;
+        top: 130px;
         
         z-index: -2;
     }

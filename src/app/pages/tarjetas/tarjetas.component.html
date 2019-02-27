@@ -1,0 +1,30 @@
+
+
+
+
+<div class="container animated bounceInUp" >
+  <div  *ngFor="let datopoke of pokemons; index as i;" class="tar1 mt-4 col-lg-4 col-md-4 ">
+    <div class="card" style="width: 18rem;">
+      <img src="/assets/img/poke.jpeg" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Nombre: {{datopoke.name}}</h5>
+        <img (click)="pokemon(datopoke)" type="button" class="pokeimg" data-toggle="modal" data-target="#exampleModalCenter" src="{{datopoke['sprites'].front_default}}">
+        <p class="card-text"></p>
+        
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Habilidades: {{datopoke.abilities['0'].ability.name}} </li>
+        <li class="list-group-item">Tipo: {{datopoke.types['0'].type.name}}</li>
+        <li class="list-group-item"></li>
+      </ul>
+      <button (click)="favoritos()" type="button" class="btn"></button>
+      <img src="/assets/img/dex.jpeg" class="card-img-top">
+    </div>
+  </div>
+</div>
+
+
+
+<app-modalpoke class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+  [pokemon]="datospoke">
+</app-modalpoke>

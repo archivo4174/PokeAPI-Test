@@ -7,10 +7,23 @@ body{
    width: 100%;
 }
 
+@media screen and (max-width: 900px){
+    body{
+   background: url(/assets/img/dsd.jpg);
+   background-size: cover;
+   background-position: center center;
+   background-repeat: repeat;
+   height: 100vh;
+   width: 100%;
+    }
+    
+    
+}
+
 .card{
     position: relative;
     top: 40px;
-    left: 30px;
+    left: 10px;
 
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.44);
 -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.44);
