@@ -19,10 +19,7 @@ export class AppComponent implements OnInit {
   datospoke = {};
  
   @ViewChild(TarjetasComponent) child: TarjetasComponent;
-  
-
-
-  
+    
 
   constructor(
    
