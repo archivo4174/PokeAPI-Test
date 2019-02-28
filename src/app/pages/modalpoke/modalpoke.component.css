@@ -16,6 +16,23 @@
     z-index: -2;
     font-size: 14px;
 }
+.salirr{
+    background: #0080ff;
+    border: none !important;
+    font-size:0;
+    height: 56px;
+    width: 58px;
+    -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 40px;
+}
+.xsalir{
+    position: absolute;
+    right: 95px;
+    top: 10px;
+
+}
+
 .pokename{
     position: relative;
    right: 535px;
@@ -23,7 +40,14 @@
     
     z-index: -2;
 }
-
+.salir{
+    position: absolute;
+    right: 343px;
+     top: 25px;
+     width: 130px;
+     height: 53;
+     z-index: 0;
+}
 .imgPoke{
     
     width: 300px;
