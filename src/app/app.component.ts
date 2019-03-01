@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.datospoke = this.child.datospoke;
+    
   }
 }
   

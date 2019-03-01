@@ -25,6 +25,7 @@ export class TarjetasComponent implements OnInit {
     audio.src = "/assets/audio/pokemon.mp3";
     audio.load();
     audio.play();
+    
     this.datospoke = pokemon;
     
   }

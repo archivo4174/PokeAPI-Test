@@ -8,7 +8,7 @@ import { PokemonDetail } from 'src/app/models/pokemon-detail';
 })
 export class ModalpokeComponent implements OnInit {
 
-    
+ 
 
     @Input()
     pokemon: PokemonDetail

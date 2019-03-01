@@ -17,7 +17,7 @@
     font-size: 14px;
 }
 .salirr{
-    background: #0080ff;
+    background: transparent;
     border: none !important;
     font-size:0;
     height: 56px;
@@ -101,9 +101,10 @@
         
     }
 
+
     .modal-dialog{
         position: relative;
-        right: 10%;
+        right: 2%;
         max-width:390px;
     }
     .pokedexx2{
@@ -128,7 +129,7 @@
     .estadisticas{
         position: relative;
         top: 535px;
-        right: 10px;
+        right: 40px;
         z-index: -2;
         font-size: 12px;
        
@@ -140,6 +141,34 @@
         
         z-index: -2;
     }
+    .salir{
+    position: absolute;
+    right: 45px;
+    top: -234px;
+     width: 59px;
+     height: 53;
+     z-index: 0;
+}
+.xsalir{
+    position: absolute;
+    right: 24px;
 
+}
+.salirr{
+    background: transparent;
+
+}
+
+}
+
+@media screen and (max-width: 379px){
+    .salir{
+        position: absolute;
+        right: 25px;
+        top: -234px;
+         width: 59px;
+         height: 53;
+         z-index: 0;
+    }
 }
 

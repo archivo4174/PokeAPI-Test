@@ -8,6 +8,14 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class InicioComponent implements OnInit {
 
+
+  seleccionar(){
+    let audio = new Audio();
+    audio.src = "/assets/audio/select.mp3";
+    audio.load();
+    audio.play();
+  }
+
   constructor(public datospoke: AppComponent) { }
 
   ngOnInit() {
