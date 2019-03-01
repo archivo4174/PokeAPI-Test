@@ -18,10 +18,10 @@
 
 .carpokedatos{
     position: relative;
-    top: -126;
+    bottom: 82px;
     left: 10%;
     border: solid 3px #000000;
-    width: 190px;
+    width: 270px;
 }
 
 .cuerpopoke{
@@ -29,15 +29,64 @@
     width: 86px;
     height: 10px;
 }
+.back{
+    content:url("/assets/img/backpoke.jpg");
+    border-radius: 99px;
+    position: relative;
+    bottom: 114px;
+    border: solid 3px #000000;
+    left: -37px;
+    height: 96px;
+    width: 325px;
+
+}
+.hp{
+    position: relative;
+    bottom: 177px;
+    left: 139px;
+}
 .namepoke{
     position: relative;
-    right: 39px;
-    top: 0px;
+    right: 58px;
+    top: -4px;
+    font-size: 22px;
+    color: white;
+    height: 22px;
+    font-family: 'VT323', monospace;
 }
 
 .balll{
     width: 111px;
     position: relative;
-    right: 17px;
+    right: 50px;
     bottom: 16px;
+    z-index: 1;
+}
+/*     lista favoritos responsiva  */
+@media screen and (max-width: 1199px){
+.carpoke{
+    position: relative;
+    left: 68%;
+}
+
+}
+
+@media screen and (max-width: 991px){
+    .carpoke{
+        position: relative;
+        left: 56%;
+    }
+    
+    }
+
+/*     imagen de pokemon grande   */
+
+.contenedorpoke{
+    position: relative;
+    width: 86px;
+    height: 10px;
+}
+.bigpoke{
+    width: 245px;
+    position: relative;
 }
