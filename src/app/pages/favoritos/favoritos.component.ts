@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritosComponent implements OnInit {
 
+  eliminar(){
+    let audio = new Audio();
+    audio.src = "/assets/audio/eliminarpoke.mp3";
+    audio.load();
+    audio.play();
+  }
   constructor() { }
 
   ngOnInit() {

@@ -30,6 +30,7 @@ margin:auto;
     height: 20px;
     background: transparent;
     border: none !important;
+    outline: none;
     font-size:0;
     -webkit-border-radius: 45px;
   -moz-border-radius: 45px;

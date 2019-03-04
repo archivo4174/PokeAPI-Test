@@ -1,20 +1,69 @@
 
 
 <div class="container  animated bounceInDown">
-<div class="card text-center">
+<div class="card card-favoritos text-center">
     <div class="card-header  animated bounceIn"><img class="fball" src="/assets/img/ball.png" >
       Lista De Favoritos
       <img class="fball" src="/assets/img/ball.png" >
     </div>
-    
+
+      <!--  //slider de lista de pikemones para telefonos-->
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            
             <div class="carpoke  animated zoomIn" >
               <div class="cuerpopoke">
                     <img src="/assets/img/1.png" class="balll">
-                    <img src="/assets/img/hp.png" class="back">
+                    <img src="" class="back">
                     <img src="/assets/img/hp.png" class="hp">
+                    <button (click)="eliminar()" class="eliminar">  </button>
                   </div>
                     <div class="card-body">
                       <p class="namepoke">bulbasaur</p>
+                      <p class="vida">150/150</p>
+                    </div>
+                  </div>
+          </div>
+          <div class="carousel-item">
+            
+            <div class="carpoke  animated zoomIn" >
+              <div class="cuerpopoke">
+                    <img src="/assets/img/1.png" class="balll">
+                    <img src="" class="back">
+                    <img src="/assets/img/hp.png" class="hp">
+                    <button (click)="eliminar()" class="eliminar">  </button>
+                  </div>
+                    <div class="card-body">
+                      <p class="namepoke">bulbasaur</p>
+                      <p class="vida">150/150</p>
+                    </div>
+                  </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+          <!-- //lista favoritos pc-->
+            <div class="carpokepc  animated zoomIn" >
+              <div class="cuerpopoke">
+                    <img src="/assets/img/1.png" class="balll">
+                    <img src="" class="back">
+                    <img src="/assets/img/hp.png" class="hp">
+                    <button (click)="eliminar()" class="eliminar">  </button>
+                  </div>
+                    <div class="card-body">
+                      <p class="namepoke">bulbasaur</p>
+                      <p class="vida">150/150</p>
                     </div>
                   </div>
 

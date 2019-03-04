@@ -7,10 +7,12 @@
     width: 60px;
 }
 
-.carpoke{
+
+
+.carpokepc{
     border: solid 3px #000000;
     position: relative;
-    left: 72%;
+    left: 68%;
     top: 11px;
     width: 290px;
     border-radius: 99px;
@@ -23,14 +25,45 @@
     border: solid 3px #000000;
     width: 270px;
 }
-
+/*     cuerpo de lista de favoritos  */
 .cuerpopoke{
     position: relative;
     width: 86px;
     height: 10px;
 }
+
+.card-body{
+    padding-bottom: 0px;
+}
+.vida{
+    position: relative;
+    right: 58px;
+    top: -10px;
+    font-size: 22px;
+    color: white;
+    height: 22px;
+    width: 75px;
+    margin-left: 157px;
+    left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    font-family: 'VT323', monospace;
+}
+
+.eliminar{
+    width: 35px;
+    height: 15px;
+    border: none;
+    position: relative;
+    bottom: 237px;
+    left: 206px;
+    padding-left: 13px;
+    background: transparent;
+    outline: none;
+}
 .back{
-    content:url("/assets/img/backpoke.jpg");
+    content:url("/assets/img/backpoke.png");
     border-radius: 99px;
     position: relative;
     bottom: 114px;
@@ -62,6 +95,8 @@
     bottom: 16px;
     z-index: 1;
 }
+
+
 /*     lista favoritos responsiva  */
 @media screen and (max-width: 1199px){
 .carpoke{
@@ -72,12 +107,71 @@
 }
 
 @media screen and (max-width: 991px){
-    .carpoke{
+    .carpokepc{
         position: relative;
-        left: 56%;
+        width: 280px;
+        left: 57%;
+        top: 10px
     }
+   
     
     }
+
+    @media screen and (min-width: 991px){
+        
+        .carousel{
+            display: none;
+            
+        }
+       
+        
+        }
+
+    @media screen and (max-width: 767px){
+        .carpokepc{
+            display: none;
+        }
+        .carpoke{
+            position: relative;
+            width: 280px;
+            left: 15%;
+            top: 10px
+        }
+        .carousel{
+            position: relative;
+            height: 120px;
+            
+            }
+            .carousel-inner{
+                height: 120px;
+            }
+
+            .carpokedatos{
+                position: relative;
+                bottom: 5px;
+                left: 15%;
+                border: solid 3px #000000;
+                width: 270px;
+            }
+            .card-favoritos{
+                position: relative;
+                top: 40px;
+                left: 0px;
+            }
+        
+        }
+
+        @media screen and (min-width: 767px){
+            
+            .carousel{
+                display: none;
+                
+            }
+           
+            
+            }
+
+
 
 /*     imagen de pokemon grande   */
 
