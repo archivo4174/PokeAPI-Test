@@ -12,11 +12,24 @@ export class TarjetasComponent implements OnInit {
   pokemons = [];
   datospoke = {};
 
-  favoritos(){
+
+  
+
+  favoritos(pokemon){
     let audio = new Audio();
     audio.src = "/assets/audio/agregado.mp3";
     audio.load();
     audio.play();
+
+    // localStorage.setItem("pokefav", JSON.stringify(pokemon));
+    // localStorage.setItem('pokefav', JSON.stringify([pokemon]));
+    
+    let lista = localStorage.getItem("pokefav") ? JSON.parse(localStorage.getItem("pokefav")) : [];
+    lista.push(pokemon);
+    localStorage.setItem('pokefav', JSON.stringify(lista));
+
+    
+
   }
 
   pokemon(pokemon){
@@ -34,8 +47,11 @@ export class TarjetasComponent implements OnInit {
   
 
   constructor(
+    
+
     public infoPokemon: InfoPokemonService,
-    private detailsPokemon: DetailsPokemon
+    private detailsPokemon: DetailsPokemon,
+  
   ) { }
 
   ngOnInit() {

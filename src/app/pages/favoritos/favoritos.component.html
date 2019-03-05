@@ -15,14 +15,14 @@
             
             <div class="carpoke  animated zoomIn" >
               <div class="cuerpopoke">
-                    <img src="/assets/img/1.png" class="balll">
+                    <img src="" class="balll">
                     <img src="" class="back">
                     <img src="/assets/img/hp.png" class="hp">
                     <button (click)="eliminar()" class="eliminar">  </button>
                   </div>
                     <div class="card-body">
-                      <p class="namepoke">bulbasaur</p>
-                      <p class="vida">150/150</p>
+                      <p class="namepoke"></p>
+                      <p class="vida"></p>
                     </div>
                   </div>
           </div>
@@ -30,14 +30,14 @@
             
             <div class="carpoke  animated zoomIn" >
               <div class="cuerpopoke">
-                    <img src="/assets/img/1.png" class="balll">
+                    <img src="" class="balll">
                     <img src="" class="back">
                     <img src="/assets/img/hp.png" class="hp">
                     <button (click)="eliminar()" class="eliminar">  </button>
                   </div>
                     <div class="card-body">
-                      <p class="namepoke">bulbasaur</p>
-                      <p class="vida">150/150</p>
+                      <p class="namepoke"></p>
+                      <p class="vida"></p>
                     </div>
                   </div>
           </div>
@@ -54,23 +54,30 @@
 
 
           <!-- //lista favoritos pc-->
-            <div class="carpokepc  animated zoomIn" >
-              <div class="cuerpopoke">
-                    <img src="/assets/img/1.png" class="balll">
+            <div *ngFor="let datoscard of lista_fav; index as i;" class="container tarjetalista">
+            <div  class="carpokepc  animated zoomIn" >
+              <div  class="cuerpopoke">
+                    <img src="{{datoscard['sprites'].front_default}}" class="balll">
                     <img src="" class="back">
                     <img src="/assets/img/hp.png" class="hp">
                     <button (click)="eliminar()" class="eliminar">  </button>
                   </div>
                     <div class="card-body">
-                      <p class="namepoke">bulbasaur</p>
-                      <p class="vida">150/150</p>
+                      <p class="namepoke">{{datoscard.name}}</p>
+                      <p class="vida">{{datoscard.stats['5'].base_stat}}/{{datoscard.stats['5'].base_stat}}</p>
                     </div>
-                  </div>
+                  </div></div>
 
                   <div class="carpokedatos" >
-                    <div class="contenedorpoke"></div>  <img src="/assets/img/1.png" class="bigpoke">
+                    <div class="contenedorpoke"></div>  <img src="{{datoscard['0']['sprites'].front_default}}" class="bigpoke">
                       <div class="card-body">
-                        <p class="card-text">nombre de pokemon.</p>
+                        <p class="card-text"> <img src="/assets/img/namepoke.png" class="habilicard">Nombre: </p>
+                        <p class="habilidadespoke"> <img src="/assets/img/habilidades.png" class="habilicard">Habilidades</p>
+                        <p class="habilidadespoke"> <img src="/assets/img/Estadisticas.png" class="habilicard">Estadisticas</p>
+                        <p class="habilidadespoke"> <img src="/assets/img/peso.png" class="habilicard">Peso:</p>
+                        <p class="habilidadespoke"> <img src="/assets/img/altura.png" class="habilicard">altura</p>
+                        <p class="habilidadespoke"> <img src="/assets/img/tipo.png" class="habilicard">tipo</p>
+                        <p class="habilidadespoke"> <img src="/assets/img/exp_base.png" class="habilicard">exp</p>
                       </div>
                     </div>
                  

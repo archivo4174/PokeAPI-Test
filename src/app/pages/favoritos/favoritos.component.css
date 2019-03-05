@@ -6,7 +6,9 @@
 .footerpoke{
     width: 60px;
 }
-
+.tarjetalista{
+    padding-bottom: 10px;
+}
 
 
 .carpokepc{
@@ -52,11 +54,11 @@
 }
 
 .eliminar{
-    width: 35px;
-    height: 15px;
+    width: 45px;
+    height: 25px;
     border: none;
     position: relative;
-    bottom: 237px;
+    bottom: 213px;
     left: 206px;
     padding-left: 13px;
     background: transparent;
@@ -74,13 +76,16 @@
 
 }
 .hp{
-    position: relative;
+    /*position: relative;
     bottom: 177px;
+    left: 139px;*/
+    position: absolute;
+    bottom: -45px;
     left: 139px;
 }
 .namepoke{
     position: relative;
-    right: 58px;
+    right: 42px;
     top: -4px;
     font-size: 22px;
     color: white;
@@ -183,4 +188,7 @@
 .bigpoke{
     width: 245px;
     position: relative;
+}
+.habilicard{
+    width: 20px;
 }

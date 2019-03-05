@@ -7,13 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritosComponent implements OnInit {
 
+  lista_fav = {}
+   
   eliminar(){
     let audio = new Audio();
     audio.src = "/assets/audio/eliminarpoke.mp3";
     audio.load();
     audio.play();
   }
-  constructor() { }
+
+  obtener_fav(){
+    let lista = JSON.parse( localStorage.getItem("pokefav")  );
+      this.lista_fav = lista;
+    
+  }
+
+
+  constructor() { 
+    this.obtener_fav();
+  }
 
   ngOnInit() {
   }
