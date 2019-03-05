@@ -35,7 +35,7 @@
                     <img src="{{datoscard['sprites'].front_default}}" class="balll">
                     <img src="" class="back_3">
                     <img src="/assets/img/hp.png" class="hp">
-                    <button (click)="eliminar()" class="eliminar_2">  </button>
+                    <button data-toggle="modal" data-target="#exampleModalCenterdeletemobile" (click)="eliminar(i)" class="eliminar_2">  </button>
                   </div>
                     <div class="card-body">
                       <p class="namepoke">{{datoscard.name}}</p>
@@ -64,7 +64,7 @@
                     <img src="{{datoscard['sprites'].front_default}}" class="balll">
                     <img src="" class="back">
                     <img src="/assets/img/hp.png" class="hp">
-                    <button (click)="eliminar()" class="eliminar">  </button>
+                    <button data-toggle="modal" data-target="#exampleModalCenterdelete" (click)="eliminar(i)" class="eliminar">  </button>
                   </div>
                     <div class="card-body">
                       <p class="namepoke">{{datoscard.name}}</p>
@@ -74,8 +74,8 @@
                 </div>
               </div>
 
-                  <div class="carpokedatos" >
-                    <div class="contenedorpoke"></div>  <img src="" class="bigpoke">
+                  <div class="carpokedatos  animated zoomIn" >
+                    <div class="contenedorpoke  "></div>  <img src="" class="bigpoke">
                       <div class="card-body">
                         <p class="card-text"> <img src="/assets/img/namepoke.png" class="habilicard">Nombre: </p>
                         <p class="habilidadespoke"> <img src="/assets/img/habilidades.png" class="habilicard">Habilidades</p>
@@ -90,6 +90,47 @@
     
     <div class="card-footer text-muted">
             <img src="/assets/img/Logo.png" class="footerpoke">
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModalCenterdelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Eliminado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        El pokemon a sido eliminado de favoritos.
+      </div>
+      <div class="modal-footer">
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModalCenterdeletemobile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Eliminado</h5>
+        
+      </div>
+      <div class="modal-body">
+        El pokemon a sido eliminado de favoritos.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"  (click)="relod()" >Cerrar</button>
+        
+      </div>
     </div>
   </div>
 </div>
