@@ -16,9 +16,9 @@
             <div class="carpoke  animated zoomIn" >
               <div class="cuerpopoke">
                     <img src="" class="balll">
-                    <img src="" class="back">
-                    <img src="/assets/img/hp.png" class="hp">
-                    <button (click)="eliminar()" class="eliminar">  </button>
+                    <img src="" class="back_2">
+                    <p class="textM">Desliza a los lados</p>
+                    
                   </div>
                     <div class="card-body">
                       <p class="namepoke"></p>
@@ -26,21 +26,24 @@
                     </div>
                   </div>
           </div>
-          <div class="carousel-item">
+
+          
+          <div  *ngFor="let datoscard of lista_fav; index as i;" class="carousel-item ">
             
             <div class="carpoke  animated zoomIn" >
               <div class="cuerpopoke">
-                    <img src="" class="balll">
-                    <img src="" class="back">
+                    <img src="{{datoscard['sprites'].front_default}}" class="balll">
+                    <img src="" class="back_3">
                     <img src="/assets/img/hp.png" class="hp">
-                    <button (click)="eliminar()" class="eliminar">  </button>
+                    <button (click)="eliminar()" class="eliminar_2">  </button>
                   </div>
                     <div class="card-body">
-                      <p class="namepoke"></p>
-                      <p class="vida"></p>
+                      <p class="namepoke">{{datoscard.name}}</p>
+                      <p class="vida">{{datoscard.stats['5'].base_stat}}/{{datoscard.stats['5'].base_stat}}</p>
                     </div>
                   </div>
           </div>
+        
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -54,6 +57,7 @@
 
 
           <!-- //lista favoritos pc-->
+            <div class="scroll">
             <div *ngFor="let datoscard of lista_fav; index as i;" class="container tarjetalista">
             <div  class="carpokepc  animated zoomIn" >
               <div  class="cuerpopoke">
@@ -66,10 +70,12 @@
                       <p class="namepoke">{{datoscard.name}}</p>
                       <p class="vida">{{datoscard.stats['5'].base_stat}}/{{datoscard.stats['5'].base_stat}}</p>
                     </div>
-                  </div></div>
+                  </div>
+                </div>
+              </div>
 
                   <div class="carpokedatos" >
-                    <div class="contenedorpoke"></div>  <img src="{{datoscard['0']['sprites'].front_default}}" class="bigpoke">
+                    <div class="contenedorpoke"></div>  <img src="" class="bigpoke">
                       <div class="card-body">
                         <p class="card-text"> <img src="/assets/img/namepoke.png" class="habilicard">Nombre: </p>
                         <p class="habilidadespoke"> <img src="/assets/img/habilidades.png" class="habilicard">Habilidades</p>
