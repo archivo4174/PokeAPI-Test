@@ -27,7 +27,7 @@ export class TarjetasComponent implements OnInit {
     let lista = localStorage.getItem("pokefav") ? JSON.parse(localStorage.getItem("pokefav")) : [];
     lista.push(pokemon);
     localStorage.setItem('pokefav', JSON.stringify(lista));
-
+   
     
 
   }

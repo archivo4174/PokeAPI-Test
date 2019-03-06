@@ -9,7 +9,13 @@
 .tarjetalista{
     padding-bottom: 10px;
 }
-
+.txtLista{
+    display: -webkit-inline-box;
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 20px;
+    
+}
 
 .carpokepc{
     border: solid 3px #000000;
@@ -21,11 +27,16 @@
 }
 
 .carpokedatos{
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 20px;
+    background: #398ED8   ;
     position: relative;
-    bottom: 82px;
+    bottom: 300px;
     left: 10%;
     border: solid 3px #000000;
-    width: 270px;
+    width: 500px;
+    box-shadow: inset 6px -14px 192px -32px rgba(6,36,46,1);
 }
 /*     cuerpo de lista de favoritos  */
 .cuerpopoke{
@@ -215,14 +226,15 @@
 
             .carpokedatos{
                 position: relative;
-                bottom: 5px;
-                left: 15%;
+                bottom: 25px;
+                left: 12%;
                 border: solid 3px #000000;
                 width: 270px;
             }
             .card-favoritos{
                 position: relative;
                 top: 40px;
+                height: 900px;
                 left: 0px;
             }
         
@@ -254,3 +266,9 @@
 .habilicard{
     width: 20px;
 }
+
+.bounce {
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+  }

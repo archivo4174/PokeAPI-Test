@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { PokemonDetail } from 'src/app/models/pokemon-detail';
 
 @Component({
   selector: 'app-favoritos',
@@ -8,7 +9,37 @@ import { Component, OnInit } from '@angular/core';
 export class FavoritosComponent implements OnInit {
 
   lista_fav = []
-   
+  statsDatos: PokemonDetail;
+
+  getStats() {
+    
+    if (this.statsDatos.stats) {
+      return this.statsDatos.stats.map(stat => stat.stat.name);
+      
+    } else {
+      return '';
+    }
+  }
+
+  getHabilidades(){
+    
+    if (this.statsDatos.abilities) {
+      return this.statsDatos.abilities.map(ab => ab.ability.name);
+    } else {
+      return '';
+    }
+    
+  }
+
+  getType(){
+    if (this.statsDatos.types) {
+      return this.statsDatos.types.map(types => types.type.name);
+    } else {
+      return '';
+     
+    }
+  }
+
   eliminar(item){
     this.lista_fav.splice(item,1);
     let audio = new Audio();
@@ -19,9 +50,10 @@ export class FavoritosComponent implements OnInit {
     
     
   }
-relod(){
-window.location.reload()
-}
+
+  relod(){
+    window.location.reload()
+  }
 
   obtener_fav(){
     let lista = JSON.parse( localStorage.getItem("pokefav")  );
@@ -30,13 +62,28 @@ window.location.reload()
   }
 
 
+  datos(item){
+    
+    JSON.stringify(this.lista_fav);
+    // this.lista_fav.slice(item,1);
+    this.statsDatos = this.lista_fav[item];
+    let audio = new Audio();
+    audio.src = "/assets/audio/pokemon.mp3";
+    audio.load();
+    audio.play();
+      
+  }
+     
+    
+
   constructor() { 
     this.obtener_fav();
-
+    
   
   }
 
   ngOnInit() {
+    // this.datos(0)
   }
 
 }

@@ -1,9 +1,13 @@
 
 
 <div class="container  animated bounceInDown">
-<div class="card card-favoritos text-center">
-    <div class="card-header  animated bounceIn"><img class="fball" src="/assets/img/ball.png" >
-      Lista De Favoritos
+<div class="card card-favoritos text-center"  style="
+background: #5B86A9;
+box-shadow: inset 10px 31px 174px -32px rgba(0,0,0,0.71);" >
+    <div class="card-header " style="
+    background: #5287B3;
+    /* box-shadow: inset 10px 31px 174px -32px rgba(0,0,0,0.35);" ><img class="fball" src="/assets/img/ball.png" >
+     <p class="txtLista" >  Lista De Favoritos </p>
       <img class="fball" src="/assets/img/ball.png" >
     </div>
 
@@ -32,8 +36,8 @@
             
             <div class="carpoke  animated zoomIn" >
               <div class="cuerpopoke">
-                    <img src="{{datoscard['sprites'].front_default}}" class="balll">
-                    <img src="" class="back_3">
+                    <img  (click)="datos(i)" src="{{datoscard['sprites'].front_default}}" class="balll">
+                    <img  (click)="datos(i)"  src="" class="back_3">
                     <img src="/assets/img/hp.png" class="hp">
                     <button data-toggle="modal" data-target="#exampleModalCenterdeletemobile" (click)="eliminar(i)" class="eliminar_2">  </button>
                   </div>
@@ -61,8 +65,8 @@
             <div *ngFor="let datoscard of lista_fav; index as i;" class="container tarjetalista">
             <div  class="carpokepc  animated zoomIn" >
               <div  class="cuerpopoke">
-                    <img src="{{datoscard['sprites'].front_default}}" class="balll">
-                    <img src="" class="back">
+                    <img  (click)="datos(i)"  src="{{datoscard['sprites'].front_default}}" class="balll">
+                    <img  (click)="datos(i)"  src="" class="back">
                     <img src="/assets/img/hp.png" class="hp">
                     <button data-toggle="modal" data-target="#exampleModalCenterdelete" (click)="eliminar(i)" class="eliminar">  </button>
                   </div>
@@ -74,21 +78,23 @@
                 </div>
               </div>
 
-                  <div class="carpokedatos  animated zoomIn" >
-                    <div class="contenedorpoke  "></div>  <img src="" class="bigpoke">
-                      <div class="card-body">
-                        <p class="card-text"> <img src="/assets/img/namepoke.png" class="habilicard">Nombre: </p>
-                        <p class="habilidadespoke"> <img src="/assets/img/habilidades.png" class="habilicard">Habilidades</p>
-                        <p class="habilidadespoke"> <img src="/assets/img/Estadisticas.png" class="habilicard">Estadisticas</p>
-                        <p class="habilidadespoke"> <img src="/assets/img/peso.png" class="habilicard">Peso:</p>
-                        <p class="habilidadespoke"> <img src="/assets/img/altura.png" class="habilicard">altura</p>
-                        <p class="habilidadespoke"> <img src="/assets/img/tipo.png" class="habilicard">tipo</p>
-                        <p class="habilidadespoke"> <img src="/assets/img/exp_base.png" class="habilicard">exp</p>
-                      </div>
-                    </div>
+            <div class="carpokedatos  animated zoomIn" >
+              <P>Selecciona un Pokemon</P>
+              <div class="contenedorpoke  "></div>  <img src="{{statsDatos['sprites'].front_default}}"  class="bigpoke  animated bounce">
+                <div class="card-body">
+                  <p class="card-text"> <img src="/assets/img/namepoke.png" class="habilicard">Nombre: {{statsDatos.name}}</p>
+                  <p class="habilidadespoke"> <img src="/assets/img/habilidades.png" class="habilicard">Habilidades: {{getHabilidades()}}</p>
+                  <p class="habilidadespoke"> <img src="/assets/img/Estadisticas.png" class="habilicard">Estadisticas: {{getStats()}}</p>
+                  <p class="habilidadespoke"> <img src="/assets/img/peso.png" class="habilicard">Peso: {{statsDatos.weight}}</p>
+                  <p class="habilidadespoke"> <img src="/assets/img/altura.png" class="habilicard">Altura: {{statsDatos.height}}</p>
+                  <p class="habilidadespoke"> <img src="/assets/img/tipo.png" class="habilicard">Tipo: {{getType()}}</p>
+                  <p class="habilidadespoke"> <img src="/assets/img/exp_base.png" class="habilicard">Exp. Base: {{statsDatos.base_experience}}</p>
+                </div>
+              </div>
                  
     
-    <div class="card-footer text-muted">
+    <div class="card-footer text-muted"style="
+    background: #5287B3;" >
             <img src="/assets/img/Logo.png" class="footerpoke">
     </div>
   </div>
@@ -134,3 +140,4 @@
     </div>
   </div>
 </div>
+

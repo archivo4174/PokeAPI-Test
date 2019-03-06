@@ -19,12 +19,14 @@ export class ModalpokeComponent implements OnInit {
     
     if (this.pokemon.stats) {
       return this.pokemon.stats.map(stat => stat.stat.name);
+      
     } else {
       return '';
     }
   }
 
   getHabilidades(){
+    
     if (this.pokemon.abilities) {
       return this.pokemon.abilities.map(ab => ab.ability.name);
     } else {
@@ -57,11 +59,12 @@ export class ModalpokeComponent implements OnInit {
       return this.pokemon.types.map(types => types.type.name);
     } else {
       return '';
+     
     }
   }
 
   ngOnInit() {
-
+    
   }
 
 }
