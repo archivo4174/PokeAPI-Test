@@ -175,12 +175,48 @@
     
 }
 
+.lista_1{
+    position: relative;
+    width: 293px;
+    right: 10px;
+
+}
+
+.lista_2 {
+    position: relative;
+    height: 131px;
+    width: 168px;
+    left: 293px;
+    bottom: 196px;
+}
+
+.card-text{
+    position: relative;
+    left: 115px;
+}
+
+
 /*     lista favoritos responsiva  */
 @media screen and (max-width: 1199px){
 .carpoke{
     position: relative;
     left: 68%;
 }
+
+.carpokedatos{
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 20px;
+    background: #398ED8   ;
+    position: relative;
+    bottom: 300px;
+    left: 5%;
+    border: solid 3px #000000;
+    width: 500px;
+    box-shadow: inset 6px -14px 192px -32px rgba(6,36,46,1);
+}
+
+
 
 }
 
@@ -190,6 +226,35 @@
         width: 280px;
         left: 57%;
         top: 10px
+    }
+
+    .carpokedatos{
+        position: relative;
+        bottom: 325px;
+        left: 7%;
+        border: solid 3px #000000;
+        width: 270px;
+    }
+
+    .card-text{
+        position: relative;
+        left: 30px;
+        width: 171px;
+    }
+
+    .lista_1{
+        position: relative;
+        width: 126px;
+        right:11px;
+        font-size: 15px;
+    }
+
+    .lista_2{
+        position: absolute;
+        width: 126px;
+        left: 136px;
+        font-size: 16px;
+        bottom: 80px;
     }
    
     
@@ -201,6 +266,8 @@
             display: none;
             
         }
+
+        
        
         
         }
@@ -265,6 +332,7 @@
 }
 .habilicard{
     width: 20px;
+    margin-right: 5px;
 }
 
 .bounce {
@@ -272,3 +340,15 @@
     animation-delay: 2s;
     animation-iteration-count: infinite;
   }
+
+  .cardLista{
+      width: 266px;
+      height: 274px;
+      padding-bottom: 0px;
+
+  }
+
+
+
+
+

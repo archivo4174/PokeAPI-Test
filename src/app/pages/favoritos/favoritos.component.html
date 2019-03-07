@@ -53,7 +53,7 @@ box-shadow: inset 10px 31px 174px -32px rgba(0,0,0,0.71);" >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <a class="carousel-control-next"  style="position: absolute; top: 36px;  height: 42px;" href="#carouselExampleIndicators" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
@@ -81,14 +81,20 @@ box-shadow: inset 10px 31px 174px -32px rgba(0,0,0,0.71);" >
             <div class="carpokedatos  animated zoomIn" >
               <P>Selecciona un Pokemon</P>
               <div class="contenedorpoke  "></div>  <img src="{{statsDatos['sprites'].front_default}}"  class="bigpoke  animated bounce">
-                <div class="card-body">
+                <div class="card-body  cardLista">
                   <p class="card-text"> <img src="/assets/img/namepoke.png" class="habilicard">Nombre: {{statsDatos.name}}</p>
+                  
+                  <div class="lista_1"> 
                   <p class="habilidadespoke"> <img src="/assets/img/habilidades.png" class="habilicard">Habilidades: {{getHabilidades()}}</p>
                   <p class="habilidadespoke"> <img src="/assets/img/Estadisticas.png" class="habilicard">Estadisticas: {{getStats()}}</p>
                   <p class="habilidadespoke"> <img src="/assets/img/peso.png" class="habilicard">Peso: {{statsDatos.weight}}</p>
+                   </div>
+
+                   <div  class="lista_2">
                   <p class="habilidadespoke"> <img src="/assets/img/altura.png" class="habilicard">Altura: {{statsDatos.height}}</p>
                   <p class="habilidadespoke"> <img src="/assets/img/tipo.png" class="habilicard">Tipo: {{getType()}}</p>
-                  <p class="habilidadespoke"> <img src="/assets/img/exp_base.png" class="habilicard">Exp. Base: {{statsDatos.base_experience}}</p>
+                  <p class="habilidadespoke"> <img src="/assets/img/exp_base.png" class="habilicard">Exp.Base: {{statsDatos.base_experience}}</p>
+                </div>
                 </div>
               </div>
                  

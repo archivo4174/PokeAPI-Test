@@ -83,7 +83,7 @@ export class FavoritosComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.datos(0)
+    this.datos(0)
   }
 
 }
