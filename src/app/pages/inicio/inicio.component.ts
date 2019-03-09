@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
+import { TarjetasComponent } from '../tarjetas/tarjetas.component';
+import { PokeApiResult } from 'src/app/models/poke-api.response';
 
 @Component({
   selector: 'app-inicio',
@@ -16,7 +18,16 @@ export class InicioComponent implements OnInit {
     audio.play();
   }
 
+  
+
   constructor(public datospoke: AppComponent) { }
+
+  @Input () buscador : PokeApiResult
+  
+    
+  filterPost = this.buscador;
+     
+  
 
   ngOnInit() {
 

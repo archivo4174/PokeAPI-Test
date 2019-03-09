@@ -5,7 +5,11 @@ export interface PokeApiResponse {
   results: [PokeApiResult];
 }
 
-interface PokeApiResult {
+export  interface PokeApiResult {
   name: string;
   url: string;
 }
+
+
+
+

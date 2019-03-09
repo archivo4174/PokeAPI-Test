@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { InfoPokemonService } from 'src/app/services/info-pokemon.service';
 import { DetailsPokemon } from 'src/app/services/details-pokemon.service';
-import { PokeApiResponse } from 'src/app/models/poke-api.response';
+import { PokeApiResponse, PokeApiResult } from 'src/app/models/poke-api.response';
 import { forkJoin, of } from 'rxjs';
 @Component({
   selector: 'app-tarjetas',
@@ -12,7 +12,7 @@ export class TarjetasComponent implements OnInit {
   pokemons = [];
   datospoke = {};
 
-
+ 
  
 
   favoritos(pokemon){
@@ -53,6 +53,15 @@ export class TarjetasComponent implements OnInit {
     private detailsPokemon: DetailsPokemon,
   
   ) { }
+
+  
+  
+    
+  filterPost = ""
+     
+  
+  
+  
 
   ngOnInit() {
     this.infoPokemon.getPokemons().subscribe((resp: PokeApiResponse) => {

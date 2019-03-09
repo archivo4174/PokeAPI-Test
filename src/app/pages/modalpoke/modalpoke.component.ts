@@ -63,6 +63,8 @@ export class ModalpokeComponent implements OnInit {
     }
   }
 
+ 
+
   ngOnInit() {
     
   }

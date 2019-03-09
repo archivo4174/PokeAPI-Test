@@ -9,19 +9,23 @@ import { ModalpokeComponent } from './pages/modalpoke/modalpoke.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { FavoritosComponent } from './pages/favoritos/favoritos.component';
 import { TarjetasComponent } from './pages/tarjetas/tarjetas.component';
-
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     ModalpokeComponent,
     FavoritosComponent,
-    TarjetasComponent
+    TarjetasComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+    
   ],
   providers: [
     DetailsPokemon

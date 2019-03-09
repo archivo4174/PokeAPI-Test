@@ -14,7 +14,7 @@
     top: 40px;
     right: 10px;
     z-index: -2;
-    font-size: 14px;
+    font-size: 13px;
 }
 .salirr{
     background: transparent;
@@ -50,7 +50,7 @@
 }
 .imgPoke{
     
-    width: 300px;
+    width: 240px;
     
 }
 
@@ -120,9 +120,9 @@
     }
     .divpokemon{
         position: absolute;
-        top: -140px;
+        top: -133px;
         width: 300px;
-        left: 30%;
+        left: 50%;
         z-index: 0;
     }
    
