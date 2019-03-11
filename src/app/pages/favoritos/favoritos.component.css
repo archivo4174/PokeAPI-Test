@@ -183,11 +183,11 @@
 }
 
 .lista_2 {
-    position: relative;
+    position: absolute;
     height: 131px;
     width: 168px;
     left: 293px;
-    bottom: 196px;
+    bottom: 80px;
 }
 
 .card-text{
@@ -220,7 +220,7 @@
 
 }
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 991px)ƒ{
     .carpokepc{
         position: relative;
         width: 280px;
