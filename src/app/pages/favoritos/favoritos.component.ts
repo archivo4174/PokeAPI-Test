@@ -41,6 +41,10 @@ export class FavoritosComponent implements OnInit {
     }
   }
 
+  getImage() {
+    return this.statsDatos.sprites ? this.statsDatos.sprites['front_default'] : ''
+  }
+
   eliminar(item){
     this.lista_fav.splice(item,1);
     let audio = new Audio();

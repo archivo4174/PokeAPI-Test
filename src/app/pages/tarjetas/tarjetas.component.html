@@ -1,7 +1,7 @@
 
 
-<div class="container animated bounceInUp" >
-    <input class="form-control mr-sm-2 buscador" type="text" placeholder="Busca tu Pokemon"    name= "filterPost"  [(ngModel)]="filterPost"  >
+<div class="container animated bounceInUp  inputpoke " >
+    <input class="form-control mr-sm-2 buscador animated bounceInLeft " type="text" placeholder="Busca tu Pokemon"    name= "filterPost"  [(ngModel)]="filterPost"  >
   <div  *ngFor="let datopoke of pokemons  | filter:filterPost " class="tar1 mt-4 col-lg-4 col-md-4 ">
     <div class="card" style="width: 18rem;">
       
