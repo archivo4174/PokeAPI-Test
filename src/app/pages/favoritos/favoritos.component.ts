@@ -8,6 +8,7 @@ import { PokemonDetail } from 'src/app/models/pokemon-detail';
 })
 export class FavoritosComponent implements OnInit {
 
+  // style, name conventions
   lista_fav = []
   statsDatos: PokemonDetail;
 
@@ -43,6 +44,7 @@ export class FavoritosComponent implements OnInit {
   eliminar(item){
     this.lista_fav.splice(item,1);
     let audio = new Audio();
+    // why create a new audio on each click?
     audio.src = "/assets/audio/eliminarpoke.mp3";
     audio.load();
     audio.play();
@@ -84,6 +86,7 @@ export class FavoritosComponent implements OnInit {
 
   ngOnInit() {
     this.datos(0)
+    // not use indexes
   }
 
 }

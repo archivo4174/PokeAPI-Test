@@ -1,3 +1,4 @@
+// un used modules
 import { Component, ViewChild } from '@angular/core';
 import { InfoPokemonService } from './services/info-pokemon.service';
 import { OnInit } from '@angular/core';
@@ -18,6 +19,7 @@ export class AppComponent implements OnInit {
   title = 'pokemon';
   datospoke = {};
  
+  // linter?
   @ViewChild(TarjetasComponent) child: TarjetasComponent;
     
 

@@ -4,7 +4,7 @@ import { PokeApiResponse } from '../models/poke-api.response';
 import { DetailsPokemon } from './details-pokemon.service';
 import { Observable } from 'rxjs';
 import { forkJoin, of } from 'rxjs';
-
+// unused modules
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,7 @@ export class InfoPokemonService {
   constructor(
     private http: HttpClient,
     private detailsPokemon: DetailsPokemon
+    // unused service
   ) { }
 
   getPokemons() {
@@ -26,6 +27,7 @@ export class InfoPokemonService {
           this.detailsPokemon.getPokemonDetail(resp.results[i].url);
         }*/
       // });
+      // comments?
   }
 }
 
@@ -33,3 +35,4 @@ export class InfoPokemonService {
 //sprites.front_default  img de poke
 
 // name
+// comments?
