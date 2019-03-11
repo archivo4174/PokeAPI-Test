@@ -8,27 +8,23 @@ import { PokemonDetail } from 'src/app/models/pokemon-detail';
 })
 export class FavoritosComponent implements OnInit {
 
-  lista_fav = []
+  listaFav = []
   statsDatos: PokemonDetail;
 
   getStats() {
-
     if (this.statsDatos.stats) {
       return this.statsDatos.stats.map(stat => stat.stat.name);
-
     } else {
       return '';
     }
   }
 
   getHabilidades() {
-
     if (this.statsDatos.abilities) {
       return this.statsDatos.abilities.map(ab => ab.ability.name);
     } else {
       return '';
     }
-
   }
 
   getType() {
@@ -36,7 +32,6 @@ export class FavoritosComponent implements OnInit {
       return this.statsDatos.types.map(types => types.type.name);
     } else {
       return '';
-
     }
   }
 
@@ -45,12 +40,12 @@ export class FavoritosComponent implements OnInit {
   }
 
   eliminar(item) {
-    this.lista_fav.splice(item, 1);
+    this.listaFav.splice(item, 1);
     let audio = new Audio();
     audio.src = "/assets/audio/eliminarpoke.mp3";
     audio.load();
     audio.play();
-    localStorage.setItem('pokefav', JSON.stringify(this.lista_fav));;
+    localStorage.setItem('pokefav', JSON.stringify(this.listaFav));;
 
 
   }
@@ -61,15 +56,14 @@ export class FavoritosComponent implements OnInit {
 
   obtener_fav() {
     let lista = JSON.parse(localStorage.getItem("pokefav"));
-    this.lista_fav = lista;
+    this.listaFav = lista;
 
   }
 
 
   datos(item) {
-
-    JSON.stringify(this.lista_fav);
-    this.statsDatos = this.lista_fav[item];
+    JSON.stringify(this.listaFav);
+    this.statsDatos = this.listaFav[item];
     let audio = new Audio();
     audio.src = "/assets/audio/pokemon.mp3";
     audio.load();

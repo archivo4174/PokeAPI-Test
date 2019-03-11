@@ -10,6 +10,18 @@
     padding-bottom: 10px;
 }
 
+.card-favoritos {
+    background: #5B86A9;
+    box-shadow: inset 10px 31px 174px -32px rgba(0, 0, 0, 0.71);
+}
+.card-header{
+    background: #5287B3;
+    box-shadow: inset 10px 31px 174px -32px rgba(0,0,0,0.35);
+}
+.card-footer{
+    background: #5287B3;
+}
+
 .txtLista {
     display: -webkit-inline-box;
     font-family: 'VT323', monospace;

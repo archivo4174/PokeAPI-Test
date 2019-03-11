@@ -1,8 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { InfoPokemonService } from 'src/app/services/info-pokemon.service';
 import { DetailsPokemon } from 'src/app/services/details-pokemon.service';
-import { PokeApiResponse, PokeApiResult } from 'src/app/models/poke-api.response';
-import { forkJoin, of } from 'rxjs';
+import { PokeApiResponse,  } from 'src/app/models/poke-api.response';
+import { forkJoin } from 'rxjs';
 @Component({
   selector: 'app-tarjetas',
   templateUrl: './tarjetas.component.html',
@@ -20,10 +20,6 @@ export class TarjetasComponent implements OnInit {
     audio.src = "/assets/audio/agregado.mp3";
     audio.load();
     audio.play();
-
-    // localStorage.setItem("pokefav", JSON.stringify(pokemon));
-    // localStorage.setItem('pokefav', JSON.stringify([pokemon]));
-
     let lista = localStorage.getItem("pokefav") ? JSON.parse(localStorage.getItem("pokefav")) : [];
     lista.push(pokemon);
     localStorage.setItem('pokefav', JSON.stringify(lista));
@@ -33,12 +29,10 @@ export class TarjetasComponent implements OnInit {
   }
 
   pokemon(pokemon) {
-
     let audio = new Audio();
     audio.src = "/assets/audio/pokemon.mp3";
     audio.load();
     audio.play();
-
     this.datospoke = pokemon;
 
   }
@@ -60,8 +54,6 @@ export class TarjetasComponent implements OnInit {
       const serviceMap = resp.results.map(result => this.detailsPokemon.getPokemonDetail(result.url));
       forkJoin(serviceMap).subscribe(pokemons => {
         this.pokemons = pokemons;
-
-
       });
     });
   }

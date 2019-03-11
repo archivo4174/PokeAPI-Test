@@ -1,10 +1,6 @@
 <div class="container  animated bounceInDown">
-  <div class="card card-favoritos text-center" style="
-      background: #5B86A9;
-      box-shadow: inset 10px 31px 174px -32px rgba(0,0,0,0.71);">
-    <div class="card-header " style="
-        background: #5287B3;
-        /* box-shadow: inset 10px 31px 174px -32px rgba(0,0,0,0.35);"><img class="fball" src="/assets/img/ball.png">
+  <div class="card card-favoritos text-center">
+    <div class="card-header"><img class="fball" src="/assets/img/ball.png">
       <p class="txtLista"> Lista De Favoritos </p>
       <img class="fball" src="/assets/img/ball.png">
     </div>
@@ -28,7 +24,7 @@
         </div>
 
 
-        <div *ngFor="let datoscard of lista_fav; index as i;" class="carousel-item ">
+        <div *ngFor="let datoscard of listaFav; index as i;" class="carousel-item ">
           <div class="carpoke  animated zoomIn">
             <div class="cuerpopoke">
               <img (click)="datos(i)" src="{{datoscard['sprites'].front_default}}" class="balll">
@@ -58,7 +54,7 @@
 
     <!-- //lista favoritos pc-->
     <div class="scroll">
-      <div *ngFor="let datoscard of lista_fav; index as i;" class="container tarjetalista">
+      <div *ngFor="let datoscard of listaFav; index as i;" class="container tarjetalista">
         <div class="carpokepc  animated zoomIn">
           <div class="cuerpopoke">
             <img (click)="datos(i)" src="{{datoscard['sprites'].front_default}}" class="balll">
@@ -98,8 +94,7 @@
     </div>
 
 
-    <div class="card-footer text-muted" style="
-    background: #5287B3;">
+    <div class="card-footer text-muted">
       <img src="/assets/img/Logo.png" class="footerpoke">
     </div>
   </div>
