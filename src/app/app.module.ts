@@ -25,7 +25,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule
-    
+    /* Style, Formating */
   ],
   providers: [
     DetailsPokemon

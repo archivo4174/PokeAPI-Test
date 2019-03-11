@@ -42,6 +42,7 @@ export class FavoritosComponent implements OnInit {
   eliminar(item) {
     this.listaFav.splice(item, 1);
     let audio = new Audio();
+    // why create a new audio on each click?
     audio.src = "/assets/audio/eliminarpoke.mp3";
     audio.load();
     audio.play();
@@ -68,19 +69,13 @@ export class FavoritosComponent implements OnInit {
     audio.src = "/assets/audio/pokemon.mp3";
     audio.load();
     audio.play();
-
   }
-
-
 
   constructor() {
     this.obtener_fav();
-
-
   }
 
   ngOnInit() {
-
   }
 
 }
