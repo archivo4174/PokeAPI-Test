@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { PokemonDetail } from 'src/app/models/pokemon-detail';
 
 @Component({
@@ -12,31 +12,31 @@ export class FavoritosComponent implements OnInit {
   statsDatos: PokemonDetail;
 
   getStats() {
-    
+
     if (this.statsDatos.stats) {
       return this.statsDatos.stats.map(stat => stat.stat.name);
-      
+
     } else {
       return '';
     }
   }
 
-  getHabilidades(){
-    
+  getHabilidades() {
+
     if (this.statsDatos.abilities) {
       return this.statsDatos.abilities.map(ab => ab.ability.name);
     } else {
       return '';
     }
-    
+
   }
 
-  getType(){
+  getType() {
     if (this.statsDatos.types) {
       return this.statsDatos.types.map(types => types.type.name);
     } else {
       return '';
-     
+
     }
   }
 
@@ -44,50 +44,49 @@ export class FavoritosComponent implements OnInit {
     return this.statsDatos.sprites ? this.statsDatos.sprites['front_default'] : ''
   }
 
-  eliminar(item){
-    this.lista_fav.splice(item,1);
+  eliminar(item) {
+    this.lista_fav.splice(item, 1);
     let audio = new Audio();
     audio.src = "/assets/audio/eliminarpoke.mp3";
     audio.load();
     audio.play();
     localStorage.setItem('pokefav', JSON.stringify(this.lista_fav));;
-    
-    
+
+
   }
 
-  relod(){
+  relod() {
     window.location.reload()
   }
 
-  obtener_fav(){
-    let lista = JSON.parse( localStorage.getItem("pokefav")  );
-      this.lista_fav = lista;
-    
+  obtener_fav() {
+    let lista = JSON.parse(localStorage.getItem("pokefav"));
+    this.lista_fav = lista;
+
   }
 
 
-  datos(item){
-    
+  datos(item) {
+
     JSON.stringify(this.lista_fav);
-    // this.lista_fav.slice(item,1);
     this.statsDatos = this.lista_fav[item];
     let audio = new Audio();
     audio.src = "/assets/audio/pokemon.mp3";
     audio.load();
     audio.play();
-      
-  }
-     
-    
 
-  constructor() { 
+  }
+
+
+
+  constructor() {
     this.obtener_fav();
-    
-  
+
+
   }
 
   ngOnInit() {
-    this.datos(0)
+
   }
 
 }

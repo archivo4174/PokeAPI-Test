@@ -1,6 +1,5 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { AppComponent } from 'src/app/app.component';
-import { TarjetasComponent } from '../tarjetas/tarjetas.component';
 import { PokeApiResult } from 'src/app/models/poke-api.response';
 
 @Component({
@@ -11,27 +10,27 @@ import { PokeApiResult } from 'src/app/models/poke-api.response';
 export class InicioComponent implements OnInit {
 
 
-  seleccionar(){
+  seleccionar() {
     let audio = new Audio();
     audio.src = "/assets/audio/select.mp3";
     audio.load();
     audio.play();
   }
 
-  
+
 
   constructor(public datospoke: AppComponent) { }
 
-  @Input () buscador : PokeApiResult
-  
-    
+  @Input() buscador: PokeApiResult
+
+
   filterPost = this.buscador;
-     
-  
+
+
 
   ngOnInit() {
 
-  
+
   }
 
 }

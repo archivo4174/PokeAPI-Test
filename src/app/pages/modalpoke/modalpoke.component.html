@@ -1,37 +1,32 @@
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter"  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-     <div  class="divimg"> <div   class="salir close" data-dismiss="modal" >  <button  type="button" class="salirr" data-dismiss="modal"></button></div> 
-        <img class="pokedexx" src="/assets/img/pokedex.png" > <img class="pokedexx2" src="" > 
-      <div class="divpokemon"> <img src="{{getImage()}}" class="imgPoke" > </div>
-    </div>
-     <div class="estadisticas">
-        <ul>
-          <li>  Habilidades:</li>
-          <p>  {{getHabilidades()}}</p>
-          <li >Estadísticas:</li>
-          <p> {{getStats()}}</p>
-          <li >Peso:</li>
-          <P> {{getPeso( )}}</P>
-          <li >Altura:</li>
-          <P> {{getAltura()}}</P>
-          <li>Tipo de pokemon:</li>
-          <p> {{getType()}}</p>
-          <li>Experiencia Base:</li>
-          <p> {{getBase()}}</p>
-      
-        </ul>
+<div class="modal fade" id="exampleModalCenter" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="divimg">
+      <div class="salir close" data-dismiss="modal"> <button type="button" class="salirr" data-dismiss="modal"></button>
       </div>
-      <div class=" carta" >
-        
-      </div>
-      <div class="pokename"> <p > <img src="/assets/img/namepoke.png" class="habilicard">  {{getName()}}</p> </div>
-      
-     
+      <img class="pokedexx" src="/assets/img/pokedex.png"> <img class="pokedexx2" src="">
+      <div class="divpokemon"> <img src="{{getImage()}}" class="imgPoke"> </div>
     </div>
+    <div class="estadisticas">
+      <ul>
+        <li> Habilidades:</li>
+        <p> {{getHabilidades()}}</p>
+        <li>Estadísticas:</li>
+        <p> {{getStats()}}</p>
+        <li>Peso:</li>
+        <P> {{getPeso( )}}</P>
+        <li>Altura:</li>
+        <P> {{getAltura()}}</P>
+        <li>Tipo de pokemon:</li>
+        <p> {{getType()}}</p>
+        <li>Experiencia Base:</li>
+        <p> {{getBase()}}</p>
+      </ul>
+    </div>
+    <div class=" carta">
+    </div>
+    <div class="pokename">
+      <p> <img src="/assets/img/namepoke.png" class="habilicard"> {{getName()}}</p>
+    </div>
+  </div>
 </div>
-
-
-
-
-

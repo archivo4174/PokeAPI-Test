@@ -1,114 +1,114 @@
-
-
 <div class="container  animated bounceInDown">
-<div class="card card-favoritos text-center"  style="
-background: #5B86A9;
-box-shadow: inset 10px 31px 174px -32px rgba(0,0,0,0.71);" >
+  <div class="card card-favoritos text-center" style="
+      background: #5B86A9;
+      box-shadow: inset 10px 31px 174px -32px rgba(0,0,0,0.71);">
     <div class="card-header " style="
-    background: #5287B3;
-    /* box-shadow: inset 10px 31px 174px -32px rgba(0,0,0,0.35);" ><img class="fball" src="/assets/img/ball.png" >
-     <p class="txtLista" >  Lista De Favoritos </p>
-      <img class="fball" src="/assets/img/ball.png" >
+        background: #5287B3;
+        /* box-shadow: inset 10px 31px 174px -32px rgba(0,0,0,0.35);"><img class="fball" src="/assets/img/ball.png">
+      <p class="txtLista"> Lista De Favoritos </p>
+      <img class="fball" src="/assets/img/ball.png">
     </div>
 
-      <!--  //slider de lista de pikemones para telefonos-->
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            
-            <div class="carpoke  animated zoomIn" >
-              <div class="cuerpopoke">
-                    <img src="" class="balll">
-                    <img src="" class="back_2">
-                    <p class="textM">Desliza a los lados</p>
-                    
-                  </div>
-                    <div class="card-body">
-                      <p class="namepoke"></p>
-                      <p class="vida"></p>
-                    </div>
-                  </div>
-          </div>
+    <!--  //slider de lista de pikemones para telefonos-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
-          
-          <div  *ngFor="let datoscard of lista_fav; index as i;" class="carousel-item ">
-            
-            <div class="carpoke  animated zoomIn" >
-              <div class="cuerpopoke">
-                    <img  (click)="datos(i)" src="{{datoscard['sprites'].front_default}}" class="balll">
-                    <img  (click)="datos(i)"  src="" class="back_3">
-                    <img src="/assets/img/hp.png" class="hp">
-                    <button data-toggle="modal" data-target="#exampleModalCenterdeletemobile" (click)="eliminar(i)" class="eliminar_2">  </button>
-                  </div>
-                    <div class="card-body">
-                      <p class="namepoke">{{datoscard.name}}</p>
-                      <p class="vida">{{datoscard.stats['5'].base_stat}}/{{datoscard.stats['5'].base_stat}}</p>
-                    </div>
-                  </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carpoke  animated zoomIn">
+            <div class="cuerpopoke">
+              <img src="" class="balll">
+              <img src="" class="back_2">
+              <p class="textM">Desliza a los lados</p>
+            </div>
+            <div class="card-body">
+              <p class="namepoke"></p>
+              <p class="vida"></p>
+            </div>
           </div>
-        
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next"  style="position: absolute; top: 36px;  height: 42px;" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+
+
+        <div *ngFor="let datoscard of lista_fav; index as i;" class="carousel-item ">
+          <div class="carpoke  animated zoomIn">
+            <div class="cuerpopoke">
+              <img (click)="datos(i)" src="{{datoscard['sprites'].front_default}}" class="balll">
+              <img (click)="datos(i)" src="" class="back_3">
+              <img src="/assets/img/hp.png" class="hp">
+              <button data-toggle="modal" data-target="#exampleModalCenterdeletemobile" (click)="eliminar(i)"
+                class="eliminar_2"> </button>
+            </div>
+            <div class="card-body">
+              <p class="namepoke">{{datoscard.name}}</p>
+              <p class="vida">{{datoscard.stats['5'].base_stat}}/{{datoscard.stats['5'].base_stat}}</p>
+            </div>
+          </div>
+        </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" style="position: absolute; top: 36px;  height: 42px;"
+        href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
 
 
-          <!-- //lista favoritos pc-->
-            <div class="scroll">
-            <div *ngFor="let datoscard of lista_fav; index as i;" class="container tarjetalista">
-            <div  class="carpokepc  animated zoomIn" >
-              <div  class="cuerpopoke">
-                    <img  (click)="datos(i)"  src="{{datoscard['sprites'].front_default}}" class="balll">
-                    <img  (click)="datos(i)"  src="" class="back">
-                    <img src="/assets/img/hp.png" class="hp">
-                    <button data-toggle="modal" data-target="#exampleModalCenterdelete" (click)="eliminar(i)" class="eliminar">  </button>
-                  </div>
-                    <div class="card-body">
-                      <p class="namepoke">{{datoscard.name}}</p>
-                      <p class="vida">{{datoscard.stats['5'].base_stat}}/{{datoscard.stats['5'].base_stat}}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <!-- //lista favoritos pc-->
+    <div class="scroll">
+      <div *ngFor="let datoscard of lista_fav; index as i;" class="container tarjetalista">
+        <div class="carpokepc  animated zoomIn">
+          <div class="cuerpopoke">
+            <img (click)="datos(i)" src="{{datoscard['sprites'].front_default}}" class="balll">
+            <img (click)="datos(i)" src="" class="back">
+            <img src="/assets/img/hp.png" class="hp">
+            <button data-toggle="modal" data-target="#exampleModalCenterdelete" (click)="eliminar(i)" class="eliminar">
+            </button>
+          </div>
+          <div class="card-body">
+            <p class="namepoke">{{datoscard.name}}</p>
+            <p class="vida">{{datoscard.stats['5'].base_stat}}/{{datoscard.stats['5'].base_stat}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <div class="carpokedatos  animated zoomIn" >
-              <P>Selecciona un Pokemon</P>
-              <div class="contenedorpoke  "></div>  <img src="{{getImage()}}"  class="bigpoke  animated bounce">
-                <div class="card-body  cardLista">
-                  <p class="card-text"> <img src="/assets/img/namepoke.png" class="habilicard">Nombre: {{statsDatos.name}}</p>
-                  
-                  <div class="lista_1"> 
-                  <p class="habilidadespoke"> <img src="/assets/img/habilidades.png" class="habilicard">Habilidades: {{getHabilidades()}}</p>
-                  <p class="habilidadespoke"> <img src="/assets/img/Estadisticas.png" class="habilicard">Estadisticas: {{getStats()}}</p>
-                  <p class="habilidadespoke"> <img src="/assets/img/peso.png" class="habilicard">Peso: {{statsDatos.weight}}</p>
-                   </div>
+    <div class="carpokedatos  animated zoomIn">
+      <P>Selecciona un Pokemon</P>
+      <div class="contenedorpoke  "></div> <img src="{{getImage()}}" class="bigpoke  animated bounce">
+      <div class="card-body  cardLista">
+        <p class="card-text"> <img src="/assets/img/namepoke.png" class="habilicard">Nombre: {{statsDatos.name}}</p>
+        <div class="lista_1">
+          <p class="habilidadespoke"> <img src="/assets/img/habilidades.png" class="habilicard">Habilidades:
+            {{getHabilidades()}}</p>
+          <p class="habilidadespoke"> <img src="/assets/img/Estadisticas.png" class="habilicard">Estadisticas:
+            {{getStats()}}</p>
+          <p class="habilidadespoke"> <img src="/assets/img/peso.png" class="habilicard">Peso: {{statsDatos.weight}}</p>
+        </div>
+        <div class="lista_2">
+          <p class="habilidadespoke"> <img src="/assets/img/altura.png" class="habilicard">Altura: {{statsDatos.height}}
+          </p>
+          <p class="habilidadespoke"> <img src="/assets/img/tipo.png" class="habilicard">Tipo: {{getType()}}</p>
+          <p class="habilidadespoke"> <img src="/assets/img/exp_base.png" class="habilicard">Exp.Base:
+            {{statsDatos.base_experience}}</p>
+        </div>
+      </div>
+    </div>
 
-                   <div  class="lista_2">
-                  <p class="habilidadespoke"> <img src="/assets/img/altura.png" class="habilicard">Altura: {{statsDatos.height}}</p>
-                  <p class="habilidadespoke"> <img src="/assets/img/tipo.png" class="habilicard">Tipo: {{getType()}}</p>
-                  <p class="habilidadespoke"> <img src="/assets/img/exp_base.png" class="habilicard">Exp.Base: {{statsDatos.base_experience}}</p>
-                </div>
-                </div>
-              </div>
-                 
-    
-    <div class="card-footer text-muted"style="
-    background: #5287B3;" >
-            <img src="/assets/img/Logo.png" class="footerpoke">
+
+    <div class="card-footer text-muted" style="
+    background: #5287B3;">
+      <img src="/assets/img/Logo.png" class="footerpoke">
     </div>
   </div>
 </div>
 
 
 
-<div class="modal fade" id="exampleModalCenterdelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="exampleModalCenterdelete" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -121,29 +121,25 @@ box-shadow: inset 10px 31px 174px -32px rgba(0,0,0,0.71);" >
         El pokemon a sido eliminado de favoritos.
       </div>
       <div class="modal-footer">
-        
-        
       </div>
     </div>
   </div>
 </div>
 
 
-<div class="modal fade" id="exampleModalCenterdeletemobile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="exampleModalCenterdeletemobile" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalCenterTitle">Eliminado</h5>
-        
       </div>
       <div class="modal-body">
         El pokemon a sido eliminado de favoritos.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal"  (click)="relod()" >Cerrar</button>
-        
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="relod()">Cerrar</button>
       </div>
     </div>
   </div>
 </div>
-

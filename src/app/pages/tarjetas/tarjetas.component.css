@@ -1,27 +1,26 @@
-.ball{
+.ball {
     position: relative;
     right: 10px;
 }
 
-.navbar{
-
-    -webkit-box-shadow: 7px 0px 73px 6px rgba(0,0,0,0.49);
-    -moz-box-shadow: 7px 0px 73px 6px rgba(0,0,0,0.49);
-    box-shadow: 7px 0px 73px 6px rgba(0,0,0,0.49);
+.navbar {
+    -webkit-box-shadow: 7px 0px 73px 6px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: 7px 0px 73px 6px rgba(0, 0, 0, 0.49);
+    box-shadow: 7px 0px 73px 6px rgba(0, 0, 0, 0.49);
 }
+
 .tar1 {
     position: relative;
-
-
     display: inline-flex;
 }
 
-.pokeimg{
+.pokeimg {
     position: relative;
-    display:block;
-margin:auto;
+    display: block;
+    margin: auto;
 }
-.btn{
+
+.btn {
     position: absolute;
     left: 237px;
     right: 30px;
@@ -31,24 +30,12 @@ margin:auto;
     background: transparent;
     border: none !important;
     outline: none;
-    font-size:0;
+    font-size: 0;
     -webkit-border-radius: 45px;
-  -moz-border-radius: 45px;
-  border-radius: 45px;
+    -moz-border-radius: 45px;
+    border-radius: 45px;
 }
 
-
-.buscador{
-width: 167px;
-
-}
-
-
-
-@media screen and (max-width: 991px){
-
-    .inputpoke{
-       
-    }
-
+.buscador {
+    width: 167px;
 }

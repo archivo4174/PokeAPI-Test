@@ -1,23 +1,23 @@
-
-
-.fball{
+.fball {
     width: 25px;
 }
-.footerpoke{
+
+.footerpoke {
     width: 60px;
 }
-.tarjetalista{
+
+.tarjetalista {
     padding-bottom: 10px;
 }
-.txtLista{
+
+.txtLista {
     display: -webkit-inline-box;
     font-family: 'VT323', monospace;
     color: white;
     font-size: 20px;
-    
 }
 
-.carpokepc{
+.carpokepc {
     border: solid 3px #000000;
     position: relative;
     left: 68%;
@@ -26,29 +26,32 @@
     border-radius: 99px;
 }
 
-.carpokedatos{
+.carpokedatos {
     font-family: 'VT323', monospace;
     color: white;
     font-size: 20px;
-    background: #398ED8   ;
+    background: #398ED8;
     position: relative;
     bottom: 300px;
     left: 10%;
     border: solid 3px #000000;
     width: 500px;
-    box-shadow: inset 6px -14px 192px -32px rgba(6,36,46,1);
+    box-shadow: inset 6px -14px 192px -32px rgba(6, 36, 46, 1);
 }
+
 /*     cuerpo de lista de favoritos  */
-.cuerpopoke{
+
+.cuerpopoke {
     position: relative;
     width: 86px;
     height: 10px;
 }
 
-.card-body{
+.card-body {
     padding-bottom: 0px;
 }
-.vida{
+
+.vida {
     position: relative;
     right: 58px;
     top: -10px;
@@ -64,7 +67,7 @@
     font-family: 'VT323', monospace;
 }
 
-.eliminar{
+.eliminar {
     width: 45px;
     height: 25px;
     border: none;
@@ -75,7 +78,8 @@
     background: transparent;
     outline: none;
 }
-.eliminar_2{
+
+.eliminar_2 {
     width: 45px;
     height: 25px;
     border: none;
@@ -86,8 +90,9 @@
     background: transparent;
     outline: none;
 }
-.back{
-    content:url("/assets/img/backpoke.png");
+
+.back {
+    content: url("/assets/img/backpoke.png");
     border-radius: 99px;
     position: relative;
     bottom: 114px;
@@ -95,10 +100,10 @@
     left: -37px;
     height: 96px;
     width: 325px;
-
 }
-.back_2{
-    content:url("/assets/img/backpoketxt.png");
+
+.back_2 {
+    content: url("/assets/img/backpoketxt.png");
     border-radius: 99px;
     position: relative;
     bottom: 25px;
@@ -106,10 +111,10 @@
     left: -37px;
     height: 96px;
     width: 325px;
-
 }
-.back_3{
-    content:url("/assets/img/backpoke.png");
+
+.back_3 {
+    content: url("/assets/img/backpoke.png");
     border-radius: 99px;
     position: relative;
     bottom: 114px;
@@ -117,19 +122,15 @@
     left: -37px;
     height: 96px;
     width: 325px;
-
 }
 
-.hp{
-    /*position: relative;
-    bottom: 177px;
-    left: 139px;*/
+.hp {
     position: absolute;
     bottom: -45px;
     left: 139px;
 }
-.textM{
-   
+
+.textM {
     position: absolute;
     bottom: -77px;
     left: 25px;
@@ -139,7 +140,8 @@
     font-family: 'VT323', monospace;
     font-size: 24px;
 }
-.namepoke{
+
+.namepoke {
     position: relative;
     right: 42px;
     top: -4px;
@@ -149,7 +151,7 @@
     font-family: 'VT323', monospace;
 }
 
-.balll{
+.balll {
     width: 111px;
     position: relative;
     right: 50px;
@@ -158,28 +160,26 @@
 }
 
 .scroll {
-    
     overflow: scroll;
     height: 338px;
     overflow-x: hidden;
 }
+
 .scroll::-webkit-scrollbar {
     width: 7px;
     overflow-x: hidden;
 }
 
 .scroll::-webkit-scrollbar-thumb {
-	background: #364478;
+    background: #364478;
     border-radius: 5px;
     overflow-x: hidden;
-    
 }
 
-.lista_1{
+.lista_1 {
     position: relative;
     width: 293px;
     right: 10px;
-
 }
 
 .lista_2 {
@@ -190,147 +190,124 @@
     bottom: 80px;
 }
 
-.card-text{
+.card-text {
     position: relative;
     left: 115px;
 }
 
-
 /*     lista favoritos responsiva  */
-@media screen and (max-width: 1199px){
-.carpoke{
-    position: relative;
-    left: 68%;
+
+@media screen and (max-width: 1199px) {
+    .carpoke {
+        position: relative;
+        left: 68%;
+    }
+    .carpokedatos {
+        font-family: 'VT323', monospace;
+        color: white;
+        font-size: 20px;
+        background: #398ED8;
+        position: relative;
+        bottom: 300px;
+        left: 5%;
+        border: solid 3px #000000;
+        width: 500px;
+        box-shadow: inset 6px -14px 192px -32px rgba(6, 36, 46, 1);
+    }
 }
 
-.carpokedatos{
-    font-family: 'VT323', monospace;
-    color: white;
-    font-size: 20px;
-    background: #398ED8   ;
-    position: relative;
-    bottom: 300px;
-    left: 5%;
-    border: solid 3px #000000;
-    width: 500px;
-    box-shadow: inset 6px -14px 192px -32px rgba(6,36,46,1);
-}
-
-
-
-}
-
-@media screen and (max-width: 991px)ƒ{
-    .carpokepc{
+@media screen and (max-width: 991px) {
+    .carpokepc {
         position: relative;
         width: 280px;
         left: 57%;
         top: 10px
     }
-
-    .carpokedatos{
+    .carpokedatos {
         position: relative;
         bottom: 325px;
         left: 7%;
         border: solid 3px #000000;
         width: 270px;
     }
-
-    .card-text{
+    .card-text {
         position: relative;
         left: 30px;
         width: 171px;
     }
-
-    .lista_1{
+    .lista_1 {
         position: relative;
         width: 126px;
-        right:11px;
+        right: 11px;
         font-size: 15px;
     }
-
-    .lista_2{
+    .lista_2 {
         position: absolute;
         width: 126px;
         left: 136px;
         font-size: 16px;
         bottom: 80px;
     }
-   
-    
+}
+
+@media screen and (min-width: 991px) {
+    .carousel {
+        display: none;
     }
+}
 
-    @media screen and (min-width: 991px){
-        
-        .carousel{
-            display: none;
-            
-        }
+@media screen and (max-width: 767px) {
+    .carpokepc {
+        display: none;
+    }
+    .carpoke {
+        position: relative;
+        width: 280px;
+        left: 15%;
+        top: 10px
+    }
+    .carousel {
+        position: relative;
+        height: 120px;
+    }
+    .carousel-inner {
+        height: 120px;
+    }
+    .carpokedatos {
+        position: relative;
+        bottom: 25px;
+        left: 12%;
+        border: solid 3px #000000;
+        width: 270px;
+    }
+    .card-favoritos {
+        position: relative;
+        top: 40px;
+        height: 900px;
+        left: 0px;
+    }
+}
 
-        
-       
-        
-        }
-
-    @media screen and (max-width: 767px){
-        .carpokepc{
-            display: none;
-        }
-        .carpoke{
-            position: relative;
-            width: 280px;
-            left: 15%;
-            top: 10px
-        }
-        .carousel{
-            position: relative;
-            height: 120px;
-            
-            }
-            .carousel-inner{
-                height: 120px;
-            }
-
-            .carpokedatos{
-                position: relative;
-                bottom: 25px;
-                left: 12%;
-                border: solid 3px #000000;
-                width: 270px;
-            }
-            .card-favoritos{
-                position: relative;
-                top: 40px;
-                height: 900px;
-                left: 0px;
-            }
-        
-        }
-
-        @media screen and (min-width: 767px){
-            
-            .carousel{
-                display: none;
-                
-            }
-           
-            
-            }
-
-
+@media screen and (min-width: 767px) {
+    .carousel {
+        display: none;
+    }
+}
 
 /*     imagen de pokemon grande   */
 
-.contenedorpoke{
+.contenedorpoke {
     position: relative;
     width: 86px;
     height: 10px;
 }
-.bigpoke{
+
+.bigpoke {
     width: 245px;
     position: relative;
 }
-.habilicard{
+
+.habilicard {
     width: 20px;
     margin-right: 5px;
 }
@@ -339,16 +316,10 @@
     animation-duration: 3s;
     animation-delay: 2s;
     animation-iteration-count: infinite;
-  }
+}
 
-  .cardLista{
-      width: 266px;
-      height: 274px;
-      padding-bottom: 0px;
-
-  }
-
-
-
-
-
+.cardLista {
+    width: 266px;
+    height: 274px;
+    padding-bottom: 0px;
+}

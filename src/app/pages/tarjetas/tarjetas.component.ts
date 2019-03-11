@@ -12,10 +12,10 @@ export class TarjetasComponent implements OnInit {
   pokemons = [];
   datospoke = {};
 
- 
- 
 
-  favoritos(pokemon){
+
+
+  favoritos(pokemon) {
     let audio = new Audio();
     audio.src = "/assets/audio/agregado.mp3";
     audio.load();
@@ -23,53 +23,45 @@ export class TarjetasComponent implements OnInit {
 
     // localStorage.setItem("pokefav", JSON.stringify(pokemon));
     // localStorage.setItem('pokefav', JSON.stringify([pokemon]));
-    
+
     let lista = localStorage.getItem("pokefav") ? JSON.parse(localStorage.getItem("pokefav")) : [];
     lista.push(pokemon);
     localStorage.setItem('pokefav', JSON.stringify(lista));
-   
-    
+
+
 
   }
 
-  pokemon(pokemon){
-    
+  pokemon(pokemon) {
+
     let audio = new Audio();
     audio.src = "/assets/audio/pokemon.mp3";
     audio.load();
     audio.play();
-      
+
     this.datospoke = pokemon;
-    
+
   }
 
 
-  
+
 
   constructor(
-    
-
     public infoPokemon: InfoPokemonService,
     private detailsPokemon: DetailsPokemon,
-  
+
   ) { }
 
-  
-  
-    
+
   filterPost = ""
-     
-  
-  
-  
 
   ngOnInit() {
     this.infoPokemon.getPokemons().subscribe((resp: PokeApiResponse) => {
       const serviceMap = resp.results.map(result => this.detailsPokemon.getPokemonDetail(result.url));
       forkJoin(serviceMap).subscribe(pokemons => {
         this.pokemons = pokemons;
-       
-        
+
+
       });
     });
   }

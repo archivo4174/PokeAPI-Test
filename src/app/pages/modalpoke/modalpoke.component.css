@@ -1,91 +1,91 @@
-.pokedexx{
+.pokedexx {
     z-index: -4;
-     
     height: auto;
 }
-.carta{
+
+.carta {
     position: absolute;
     top: 130px;
     left: 135px;
     z-index: -3;
 }
-.estadisticas{
+
+.estadisticas {
     position: relative;
     top: 40px;
     right: 10px;
     z-index: -2;
     font-size: 13px;
 }
-.habilicard{
+
+.habilicard {
     width: 20px;
     margin-right: 5px;
     position: relative;
     left: -23px;
     top: 23px;
 }
-.salirr{
+
+.salirr {
     background: transparent;
     border: none !important;
-    font-size:0;
+    font-size: 0;
     height: 56px;
     width: 58px;
     -webkit-border-radius: 45px;
-  -moz-border-radius: 45px;
-  border-radius: 40px;
+    -moz-border-radius: 45px;
+    border-radius: 40px;
 }
-.xsalir{
+
+.xsalir {
     position: absolute;
     right: 95px;
     top: 10px;
-
 }
 
-.pokename{
+.pokename {
     position: relative;
-   right: 535px;
+    right: 535px;
     top: 150px;
-    
     z-index: -2;
 }
-.salir{
+
+.salir {
     position: absolute;
     right: 343px;
-     top: 25px;
-     width: 130px;
-     height: 53;
-     z-index: 0;
-}
-.imgPoke{
-    
-    width: 240px;
-    
+    top: 25px;
+    width: 130px;
+    height: 53;
+    z-index: 0;
 }
 
-.container{
+.imgPoke {
+    width: 240px;
+}
+
+.container {
     width: 100%;
 }
-.modal-dialog{
+
+.modal-dialog {
     position: relative;
     right: 10%;
-   
 }
-.divimg{
+
+.divimg {
     position: relative;
     width: 100%;
     z-index: -4;
 }
-@media screen and (max-width: 500px){
-    .divimg{
+
+@media screen and (max-width: 500px) {
+    .divimg {
         position: relative;
-        
         width: 80%;
-        
-
-
     }
 }
 
-.divpokemon{
+.divpokemon {
     position: absolute;
     top: 160px;
     width: 300px;
@@ -93,89 +93,76 @@
     z-index: 0;
 }
 
-
-@media screen and (max-width: 900px){
-    .pokedexx{
+@media screen and (max-width: 900px) {
+    .pokedexx {
         position: absolute;
         margin-left: auto;
         margin-right: auto;
         width: 350px;
-       left: 30px;
-       top: -250px;
-       height:500px;
-       content:url("/assets/img/imgphone.jpeg");
-       
-        
+        left: 30px;
+        top: -250px;
+        height: 500px;
+        content: url("/assets/img/imgphone.jpeg");
     }
-
-
-    .modal-dialog{
+    .modal-dialog {
         position: relative;
         right: 2%;
-        max-width:390px;
+        max-width: 390px;
     }
-    .pokedexx2{
+    .pokedexx2 {
         position: absolute;
         margin-left: auto;
         margin-right: auto;
         width: 350px;
-       left: 30px;
-       top: 245px;
-       height:500px;
-       content:url("/assets/img/imgphone_2.png");
-        
+        left: 30px;
+        top: 245px;
+        height: 500px;
+        content: url("/assets/img/imgphone_2.png");
     }
-    .divpokemon{
+    .divpokemon {
         position: absolute;
         top: -133px;
         width: 300px;
         left: 50%;
         z-index: 0;
     }
-   
-    .estadisticas{
+    .estadisticas {
         position: relative;
         top: 535px;
         right: 40px;
         z-index: -2;
         font-size: 12px;
-       
     }
-    .pokename{
+    .pokename {
         position: relative;
-       right: 160px;
+        right: 160px;
         top: 130px;
-        
         z-index: -2;
     }
-    .salir{
-    position: absolute;
-    right: 45px;
-    top: -234px;
-     width: 59px;
-     height: 53;
-     z-index: 0;
-}
-.xsalir{
-    position: absolute;
-    right: 24px;
-
-}
-.salirr{
-    background: transparent;
-
-}
-
+    .salir {
+        position: absolute;
+        right: 45px;
+        top: -234px;
+        width: 59px;
+        height: 53;
+        z-index: 0;
+    }
+    .xsalir {
+        position: absolute;
+        right: 24px;
+    }
+    .salirr {
+        background: transparent;
+    }
 }
 
-@media screen and (max-width: 379px){
-    .salir{
+@media screen and (max-width: 379px) {
+    .salir {
         position: absolute;
         right: 25px;
         top: -234px;
-         width: 59px;
-         height: 53;
-         z-index: 0;
+        width: 59px;
+        height: 53;
+        z-index: 0;
     }
 }
-
